@@ -13,30 +13,22 @@ describe "rock paper scissors game engine" do
   let(:scissors) { 3 }
 
   it "my rock beats opponent's scissors" do
-    me = rock
-    op = scissors
-
+    me, op = rock, scissors
     expect(winner(me, op)).to eq("Me")
   end
 
   it "opponent's rock beats my scissors" do
-    me = scissors
-    op = rock
-
+    me, op = scissors, rock
     expect(winner(me, op)).to eq("Opponent")
   end
 
   it "my scissors beats opponent's paper" do
-    me = scissors
-    op = paper
-
+    me, op = scissors, paper
     expect(winner(me, op)).to eq("Me")
   end
 
   it "opponent's scissors beats my paper" do
-    me = paper
-    op = scissors
-
+    me, op = paper, scissors
     expect(winner(me, op)).to eq("Opponent")
   end
 end
