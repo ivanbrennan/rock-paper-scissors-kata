@@ -1,9 +1,9 @@
 describe "rock paper scissors game engine" do
-  it "my rock beats opponent's scissors" do
-    rock     = 1
-    paper    = 2
-    scissors = 3
+  let(:rock)     { 1 }
+  let(:paper)    { 2 }
+  let(:scissors) { 3 }
 
+  it "my rock beats opponent's scissors" do
     me = rock
     op = scissors
 
@@ -13,10 +13,6 @@ describe "rock paper scissors game engine" do
   end
 
   it "opponent's rock beats my scissors" do
-    rock     = 1
-    paper    = 2
-    scissors = 3
-
     me = scissors
     op = rock
 
