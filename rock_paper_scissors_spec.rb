@@ -1,5 +1,6 @@
 def winner(me, op)
   results = {
+    0 => "Draw",
     1 => "Me",
     2 => "Opponent"
   }
@@ -40,6 +41,11 @@ describe "rock paper scissors game engine" do
   it "opponent's paper beats my rock" do
     me, op = rock, paper
     expect(winner(me, op)).to eq("Opponent")
+  end
+
+  it "rock draws with rock" do
+    me, op = rock, rock
+    expect(winner(me, op)).to eq("Draw")
   end
 end
 
