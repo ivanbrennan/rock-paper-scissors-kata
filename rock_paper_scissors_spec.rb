@@ -52,5 +52,10 @@ describe "rock paper scissors game engine" do
     me, op = scissors, scissors
     expect(winner(me, op)).to eq("Draw")
   end
+
+  it "paper draws with paper" do
+    me, op = paper, paper
+    expect(winner(me, op)).to eq("Draw")
+  end
 end
 
