@@ -1,3 +1,12 @@
+def winner(me, op)
+  results = {
+    1 => "Me",
+    2 => "Opponent"
+  }
+
+  results[(me - op) % 3]
+end
+
 describe "rock paper scissors game engine" do
   let(:rock)     { 1 }
   let(:paper)    { 2 }
@@ -7,17 +16,21 @@ describe "rock paper scissors game engine" do
     me = rock
     op = scissors
 
-    winner = [me, op].min
-
-    expect(winner).to eq(me)
+    expect(winner(me, op)).to eq("Me")
   end
 
   it "opponent's rock beats my scissors" do
     me = scissors
     op = rock
 
-    winner = [me, op].min
+    expect(winner(me, op)).to eq("Opponent")
+  end
 
-    expect(winner).to eq(op)
+  it "my scissors beats opponent's paper" do
+    me = scissors
+    op = paper
+
+    expect(winner(me, op)).to eq("Me")
   end
 end
+
