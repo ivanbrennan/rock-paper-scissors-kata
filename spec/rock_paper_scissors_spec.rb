@@ -1,9 +1,9 @@
 require 'rock_paper_scissors'
 
 describe RockPaperScissors do
-  let(:rock)     { 1 }
-  let(:paper)    { 2 }
-  let(:scissors) { 3 }
+  let(:rock)     { RockPaperScissors::Play::ROCK }
+  let(:paper)    { RockPaperScissors::Play::PAPER }
+  let(:scissors) { RockPaperScissors::Play::SCISSORS }
 
   subject(:game) { RockPaperScissors }
 
