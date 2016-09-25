@@ -6,11 +6,11 @@ class RockPaperScissors
   end
 
   def self.winner(me, op)
-    results = {
-      0 => "Draw",
-      1 => "Me",
-      2 => "Opponent"
-    }
+    results = [
+      "Draw",
+      "Me",
+      "Opponent"
+    ]
 
     results[(me - op) % 3]
   end
